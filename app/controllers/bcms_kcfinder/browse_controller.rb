@@ -96,7 +96,7 @@ module BcmsKcfinder
             name: file.name ? file.name : "",
             
             size: file.size_in_bytes,
-            path: file.link_to_path,
+            path: file.link_to_path.gsub("http", "https"),
             mtime: file.updated_at.to_i,
             date: file.created_at.strftime("%m/%d/%Y %I:%M %p"),
             readable: true,
